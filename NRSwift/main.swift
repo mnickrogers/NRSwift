@@ -37,7 +37,6 @@ func solvePuzzle(startWord w1 : String, endWord w2 : String) -> [String]
         return deviation
     }
     
-    //
     for _ in 0..<wordsArray.count
     {
         g.addVertex()
