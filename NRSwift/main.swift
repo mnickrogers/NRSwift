@@ -10,7 +10,7 @@ import Foundation
 
 var postfix = "8 2 / 3 5 + +"
 
-print(evaluatePostfixDouble(postfix))
+//print(evaluatePostfixDouble(postfix))
 
 func solvePuzzle(startWord w1 : String, endWord w2 : String) -> [String]
 {
@@ -95,9 +95,13 @@ func linkedListTest()
     let n3 = NRLinkedListNode()
     n3.text = "human"
     
-    list.add(toEnd: n1)
+//    list.add(toEnd: n1)
+//    list.add(toEnd: n2)
+//    list.add(toEnd: n3)
+    
     list.add(toEnd: n2)
-    list.add(toEnd: n3)
+    list.insert(node: n1, before: n2)
+    list.insert(node: n3, after: n2)
     
     iterate(list)
 }

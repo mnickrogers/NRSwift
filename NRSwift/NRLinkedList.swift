@@ -71,27 +71,26 @@ public class NRLinkedList
     /// Insert a node after another node.
     public func insert(node: NRLinkedListNode, after afterNode: NRLinkedListNode)
     {
-        node.head = afterNode
-        node.tail = afterNode.tail
-        afterNode.head = node
-        
         if afterNode.tail == nil
         {
             end = node
         }
+        
+        node.head = afterNode
+        node.tail = afterNode.tail
+        afterNode.tail = node
     }
     
     /// Insert a node before another node.
     public func insert(node: NRLinkedListNode, before beforeNode: NRLinkedListNode)
     {
-        node.head = beforeNode.head
-        node.tail = beforeNode
-        beforeNode.head = node
-        
         if beforeNode.head == nil
         {
             start = node
         }
+        node.head = beforeNode.head
+        node.tail = beforeNode
+        beforeNode.head = node
     }
 }
 
